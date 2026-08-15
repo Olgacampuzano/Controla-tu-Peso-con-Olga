@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Bienvenida! · Controla tu Peso con Olga</title>
+<meta name="robots" content="noindex, nofollow">
+
+<!--
+  ============================================================
+  META PIXEL — pega aquí tu código base Y el evento de compra
+  (Facebook Events Manager → Configuración → Instalar código manualmente)
+  ============================================================
+  <script>
+  !function(f,b,e,v,n,t,s){...} // snippet base de Meta
+  fbq('init', 'TU_PIXEL_ID');
+  fbq('track', 'PageView');
+  fbq('track', 'Purchase', {value: 49.99, currency: 'EUR'}); // evento de compra Básico
+  </script>
+-->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #FAF3EA;
+    --ink: #2E2A24;
+    --ink-soft: #5C5548;
+    --terracotta: #C1613A;
+    --terracotta-dark: #9C4B2C;
+    --sage: #8FA07E;
+    --sage-light: #E7ECDE;
+    --line: rgba(46,42,36,0.12);
+    --font-display: "Fraunces", serif;
+    --font-body: "Work Sans", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 3px; }
+  .container { max-width: 640px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+  header { padding: 28px 0; text-align: center; }
+  .brand-logo { height: 44px; width: auto; margin: 0 auto; }
+
+  main { flex-grow: 1; padding: 20px 0 70px; }
+
+  .intro { text-align: center; margin-bottom: 48px; }
+  .check-badge {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--sage-light); color: var(--sage);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 22px;
+  }
+  .check-badge svg { width: 30px; height: 30px; }
+  .intro h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(28px, 5vw, 38px);
+    margin-bottom: 14px;
+  }
+  .intro p { color: var(--ink-soft); font-size: 16.5px; max-width: 460px; margin: 0 auto; }
+
+  .step-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 30px 28px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .step-num {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--terracotta);
+    background: rgba(193,97,58,0.1);
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-content h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  .step-content p { color: var(--ink-soft); font-size: 14.5px; margin-bottom: 16px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .btn-telegram { background: var(--terracotta); color: var(--cream); }
+  .btn-telegram:hover { background: var(--terracotta-dark); }
+  .btn-drive { border: 1.5px solid var(--ink); color: var(--ink); }
+  .btn-drive:hover { background: var(--ink); color: var(--cream); }
+
+  .note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 30px;
+  }
+
+  footer { padding: 26px 0; text-align: center; font-size: 12.5px; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <!-- Ruta relativa: asume que este archivo está en la misma carpeta que index.html -->
+    <img src="assets/olga-logo.png" alt="Controla tu Peso con Olga" class="brand-logo">
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="intro">
+      <div class="check-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h1>¡Bienvenida a Controla tu Peso con Olga!</h1>
+      <p>Tu pago se ha completado correctamente. Solo te quedan dos pasos para empezar.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h2>Únete al grupo de Telegram</h2>
+        <p>Ahí encontrarás la comunidad, avisos de contenido nuevo y podrás resolver tus dudas.</p>
+        <!-- HUECO: sustituye el href por tu enlace permanente de invitación al grupo de Telegram Básico -->
+        <a class="btn btn-telegram" href="#" target="_blank" rel="noopener">
+          Unirme al grupo
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h2>Descarga tu guía del Mes 1</h2>
+        <p>Este mismo enlace se actualizará cada mes con tu nueva guía — guárdalo, no cambiará.</p>
+        <!-- HUECO: sustituye el href por el enlace permanente de tu carpeta de Google Drive -->
+        <a class="btn btn-drive" href="#" target="_blank" rel="noopener">
+          Descargar guía
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <p class="note">Guarda esta página en favoritos por si necesitas volver a estos enlaces más adelante.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">Controla tu Peso con Olga</div>
+</footer>
+
+</body>
+</html>
