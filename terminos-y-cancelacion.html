@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos y Cancelación · Controla tu Peso con Olga</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #FAF3EA; --ink: #2E2A24; --ink-soft: #5C5548;
+    --terracotta: #C1613A; --terracotta-dark: #9C4B2C; --sage-light: #E7ECDE;
+    --line: rgba(46,42,36,0.12);
+    --font-display: "Fraunces", serif; --font-body: "Work Sans", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--cream); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 28px 0; text-align: center; border-bottom: 1px solid var(--line); }
+  .brand-logo { height: 40px; }
+  main { padding: 50px 0 90px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px,4vw,36px); margin-bottom: 8px; }
+  .updated { color: var(--ink-soft); font-size: 13px; margin-bottom: 40px; }
+  h2 { font-family: var(--font-display); font-weight: 600; font-size: 21px; margin: 36px 0 12px; }
+  p, li { color: var(--ink-soft); font-size: 15px; margin-bottom: 12px; }
+  ul, ol { padding-left: 22px; margin-bottom: 12px; }
+  .placeholder { background: rgba(193,97,58,0.12); color: var(--terracotta-dark); padding: 1px 6px; border-radius: 4px; font-weight: 600; }
+  .callout {
+    background: var(--sage-light); border-radius: 14px; padding: 20px 22px; margin: 18px 0;
+  }
+  .callout p { color: var(--ink); margin-bottom: 0; }
+  a { color: var(--terracotta-dark); }
+  footer { padding: 30px 0; text-align: center; font-size: 13px; color: var(--ink-soft); border-top: 1px solid var(--line); }
+  footer a { margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<header><div class="container"><img src="assets/olga-logo.png" alt="Controla tu Peso con Olga" class="brand-logo"></div></header>
+
+<main>
+  <div class="container">
+    <h1>Términos y Condiciones</h1>
+    <p class="updated">Última actualización: 16 de agosto de 2026</p>
+
+    <h2>1. Objeto del contrato</h2>
+    <p>Estos términos regulan la contratación de los planes de suscripción "Básico" (49,99€/mes) y "Premium" (98,99€/mes) de Controla tu Peso con Olga, ofrecidos por Olga Campuzano Palazón. Al completar el pago, el usuario acepta estos términos.</p>
+
+    <h2>2. Qué incluye cada plan</h2>
+    <ul>
+      <li><strong>Básico:</strong> guía mensual en PDF (enviada por email), acceso a la comunidad de WhatsApp/Telegram, recetas y rutinas de ejercicio.</li>
+      <li><strong>Premium:</strong> todo lo anterior + una llamada individual de 30 minutos al mes + seguimiento personalizado + grupo de comunidad exclusivo.</li>
+    </ul>
+    <p>El contenido de las guías se entrega de forma acumulativa según la antigüedad de la suscripción de cada persona: quien lleva 3 meses suscrita recibe las guías de sus meses 1, 2 y 3, independientemente de la fecha de calendario en la que se apuntó.</p>
+
+    <h2>3. Precio y forma de pago</h2>
+    <p>El pago se realiza mensualmente por adelantado a través de Stripe, mediante tarjeta de crédito o débito. El primer cargo se realiza en el momento de la contratación, y los siguientes de forma automática cada mes en la misma fecha, hasta que el usuario cancele.</p>
+
+    <h2>4. Derecho de desistimiento (primeros 14 días)</h2>
+    <p>De acuerdo con la normativa de consumidores (Real Decreto Legislativo 1/2007), dispones de 14 días naturales desde la contratación para desistir sin justificar el motivo. Ahora bien: al tratarse de <strong>contenido digital que se entrega de forma inmediata</strong> (la guía llega por email nada más completar el pago), <strong>este derecho se pierde en el momento en que el contenido ha sido entregado</strong>, ya que en el momento de la contratación aceptas expresamente estas condiciones y reconoces la pérdida de este derecho de desistimiento.</p>
+
+    <h2>5. Cancelación de la suscripción (a partir del segundo mes)</h2>
+    <p>Puedes cancelar tu suscripción en cualquier momento, sin penalización ni permanencia mínima. Al cancelar:</p>
+    <ul>
+      <li>Dejarás de recibir cargos a partir del siguiente ciclo de facturación.</li>
+      <li>Mantienes acceso al contenido y comunidad hasta el final del periodo ya pagado.</li>
+      <li>Conservas para siempre las guías que ya hayas recibido por email, aunque canceles.</li>
+      <li>No se realizan reembolsos de la mensualidad en curso ya cobrada.</li>
+    </ul>
+    <!-- HUECO: sustituye el href="#" por tu enlace real de billing.stripe.com/p/login/... cuando lo tengas -->
+    <p><strong>Cómo cancelar:</strong> puedes cancelar tú misma en cualquier momento desde tu <a href="#">portal de gestión de suscripción</a>, o escribiéndonos por WhatsApp al <a href="https://wa.me/34629923863">+34 629 92 38 63</a>.</p>
+
+    <h2>6. Sobre el contenido del programa</h2>
+    <p>El contenido tiene finalidad educativa sobre alimentación, hábitos y actividad física. No sustituye la valoración de un profesional sanitario. Si tienes una condición médica, estás embarazada o tomas medicación, consulta con tu médico antes de realizar cambios importantes en tu alimentación o actividad física.</p>
+
+    <h2>7. Modificaciones</h2>
+    <p>Olga Campuzano Palazón podrá modificar estos términos o los precios de los planes, informando con antelación razonable a los suscriptores activos.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    Controla tu Peso con Olga
+    <div style="margin-top:8px;">
+      <a href="aviso-legal.html">Aviso Legal</a> ·
+      <a href="privacidad.html">Privacidad</a> ·
+      <a href="terminos-y-cancelacion.html">Términos y Cancelación</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
