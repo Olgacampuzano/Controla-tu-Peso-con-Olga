@@ -114,9 +114,8 @@
   }
   .btn-telegram { background: var(--terracotta); color: var(--cream); }
   .btn-telegram:hover { background: var(--terracotta-dark); }
-  .btn-drive { border: 1.5px solid var(--ink); color: var(--ink); }
-  .btn-drive:hover { background: var(--ink); color: var(--cream); }
-
+  .btn-whatsapp { background: #25D366; color: #fff; }
+  .btn-whatsapp:hover { background: #1DA851; }
   .note {
     text-align: center;
     font-size: 13px;
@@ -126,29 +125,22 @@
 
   footer { padding: 26px 0; text-align: center; font-size: 12.5px; color: var(--ink-soft); }
 
-  .btn-disabled {
-    display: inline-flex;
+  .whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 200;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
     align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    font-size: 14.5px;
-    padding: 12px 22px;
-    border-radius: 999px;
-    background: var(--sage-light);
-    color: var(--ink-soft);
-    cursor: default;
+    justify-content: center;
+    box-shadow: 0 10px 24px -6px rgba(37,211,102,0.55);
+    text-decoration: none;
   }
-  .soon-tag {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--terracotta-dark);
-    background: rgba(193,97,58,0.1);
-    padding: 4px 10px;
-    border-radius: 999px;
-    margin-bottom: 12px;
-  }
+  .whatsapp-float svg { width: 30px; height: 30px; }
 </style>
 </head>
 <body>
@@ -173,11 +165,10 @@
     <div class="step-card">
       <div class="step-num">1</div>
       <div class="step-content">
-        <h2>Únete al grupo de Telegram Premium</h2>
-        <p>Es un grupo exclusivo para miembros Premium, distinto al de Básico, donde Olga hace un seguimiento más cercano.</p>
-        <!-- HUECO: sustituye el href por tu enlace permanente de invitación al grupo de Telegram PREMIUM (distinto al de Básico) -->
-        <a class="btn btn-telegram" href="#" target="_blank" rel="noopener">
-          Unirme al grupo
+        <h2>Escríbenos por WhatsApp</h2>
+        <p>Cuéntanos que ya te has apuntado a Premium y te añadiremos personalmente al grupo exclusivo, donde Olga hace un seguimiento más cercano y encontrarás el enlace para reservar tu llamada mensual.</p>
+        <a class="btn btn-whatsapp" href="https://w.app/zkpeka" target="_blank" rel="noopener">
+          Escribir por WhatsApp
           <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -186,24 +177,9 @@
     <div class="step-card">
       <div class="step-num">2</div>
       <div class="step-content">
-        <h2>Descarga tu guía del Mes 1</h2>
-        <p>Este mismo enlace se actualizará cada mes con tu nueva guía — guárdalo, no cambiará.</p>
-        <!-- HUECO: sustituye el href por el enlace permanente de tu carpeta de Google Drive -->
-        <a class="btn btn-drive" href="#" target="_blank" rel="noopener">
-          Descargar guía
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="step-num">3</div>
-      <div class="step-content">
-        <span class="soon-tag">Muy pronto</span>
-        <h2>Reserva tu llamada mensual de 30 min</h2>
-        <p>Estamos terminando de montar el calendario de reservas. En cuanto esté listo, recibirás el enlace en el grupo de Telegram Premium para elegir tu horario.</p>
-        <!-- HUECO: cuando montéis Calendly, sustituye este bloque por un botón real igual que los de arriba -->
-        <span class="btn-disabled">Enlace disponible en breve</span>
+        <h2>Revisa tu correo</h2>
+        <p>En unos minutos recibirás un email con tu Guía Mes 1 en PDF adjunto, en la misma dirección con la que has pagado. Cada mes te llegará automáticamente la guía nueva, sin que tengas que hacer nada.</p>
+        <p style="font-size:13px; color:var(--ink-soft);">¿No lo ves? Revisa también tu carpeta de Spam o Promociones. Si sigues sin recibirlo, <a href="https://wa.me/34629923863" target="_blank" rel="noopener" style="color:var(--terracotta-dark); font-weight:600;">escríbenos por WhatsApp</a> y te lo enviamos nosotras.</p>
       </div>
     </div>
 
@@ -214,6 +190,11 @@
 <footer>
   <div class="container">Controla tu Peso con Olga</div>
 </footer>
+
+<!-- Contacto directo por WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me/34629923863" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.4.7 4.63 1.9 6.5L4 29l7.65-1.85a11.9 11.9 0 0 0 4.37.83h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 21.8c-1.5 0-2.98-.4-4.27-1.16l-.31-.18-4.54 1.1 1.12-4.5-.2-.32a9.75 9.75 0 0 1-1.5-5.22c0-5.4 4.4-9.8 9.7-9.8 2.6 0 5.03 1.02 6.87 2.86a9.63 9.63 0 0 1 2.85 6.85c0 5.4-4.4 9.8-9.72 9.8zm5.35-7.3c-.29-.15-1.73-.86-2-.95-.27-.1-.46-.15-.66.14-.2.3-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.15-1.23-.46-2.34-1.46-.86-.77-1.45-1.72-1.61-2.02-.17-.3-.02-.46.13-.6.13-.13.29-.34.44-.5.15-.17.2-.3.29-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.57-.48-.5-.66-.5-.17 0-.37-.03-.56-.03-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.73-.7 1.97-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.55-.34z"/></svg>
+</a>
 
 </body>
 </html>
