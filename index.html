@@ -320,11 +320,19 @@
 
   .testi-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
+    max-width: 920px;
+    margin: 0 auto;
   }
+  .testi-grid .testi-card { grid-column: span 2; }
+  .testi-grid .testi-card:nth-child(4) { grid-column: 2 / span 2; }
+  .testi-grid .testi-card:nth-child(5) { grid-column: 4 / span 2; }
   @media (max-width: 800px) {
     .testi-grid { grid-template-columns: 1fr; }
+    .testi-grid .testi-card,
+    .testi-grid .testi-card:nth-child(4),
+    .testi-grid .testi-card:nth-child(5) { grid-column: auto; }
   }
   .testi-card {
     background: #fff;
@@ -645,42 +653,53 @@
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">Casos reales</span>
-      <h2>Historias de mujeres que ya lo han conseguido</h2>
+      <h2>Mujeres a las que Olga ha acompañado</h2>
     </div>
     <div class="testi-grid">
-      <!-- HUECO: sustituye estos 3 testimonios por los casos reales que te pase tu madre -->
       <div class="testi-card">
-        <p class="testi-quote">"Perdí X kg en X meses siguiendo el método, y esta vez no lo he recuperado."</p>
+        <p class="testi-quote">"Me siento genial, con más energía y vitalidad para el día a día — y mi artrosis en las rodillas es como si hubiera desaparecido."</p>
         <div class="testi-person">
-          <div class="testi-avatar">N</div>
+          <div class="testi-avatar">♥</div>
           <div>
-            <div class="testi-name">Nombre, edad</div>
-            <div class="testi-meta">Cliente Controla tu Peso</div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
           </div>
         </div>
-        <span class="testi-placeholder-tag">Pendiente de sustituir</span>
       </div>
       <div class="testi-card">
-        <p class="testi-quote">"Aprendí a comer sin pasar hambre y a organizarme en la compra semanal."</p>
+        <p class="testi-quote">"Poco a poco, pasito a pasito, lo vamos consiguiendo. ¡Quién me iba a decir que en un año iba a perder casi 22 kilos!"</p>
         <div class="testi-person">
-          <div class="testi-avatar">N</div>
+          <div class="testi-avatar">♥</div>
           <div>
-            <div class="testi-name">Nombre, edad</div>
-            <div class="testi-meta">Cliente Controla tu Peso</div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
           </div>
         </div>
-        <span class="testi-placeholder-tag">Pendiente de sustituir</span>
       </div>
       <div class="testi-card">
-        <p class="testi-quote">"Por primera vez siento que tengo un método que puedo mantener siempre."</p>
+        <p class="testi-quote">"He bajado de los 60 kg... Me siento mejor físicamente, pero también anímicamente. Ahora quiero empezar a entrenar para fortalecerme."</p>
         <div class="testi-person">
-          <div class="testi-avatar">N</div>
+          <div class="testi-avatar">♥</div>
           <div>
-            <div class="testi-name">Nombre, edad</div>
-            <div class="testi-meta">Cliente Controla tu Peso</div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
           </div>
         </div>
-        <span class="testi-placeholder-tag">Pendiente de sustituir</span>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"Estoy contenta por haber bajado peso y volumen, pero también por haber hecho un cambio, haber comenzado a cuidarme de nuevo, y me siento mejor."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">♥</div>
+          <div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"Entreno acabado, he ido sin ganas pero he acabado haciendo más tiempo. Después de las tres horas que llevo en marcha, estoy activa. ¡Qué contenta estoy de haber dado el paso de cuidarme!"</p>
+        <div class="testi-person">
+          <div class="testi-avatar">♥</div>
+          <div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
