@@ -178,13 +178,36 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
 
   /* ---------- Hero ---------- */
   .hero {
-    padding: 96px 0 80px;
+    padding: 90px 0 70px;
     overflow: hidden;
+    text-align: center;
   }
   .hero-inner {
     position: relative;
     z-index: 1;
-    max-width: 680px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .hero-photo-wrap {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    margin: 0 auto 22px;
+  }
+  .hero-photo-ring {
+    position: absolute;
+    inset: -14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--sage-light) 0%, var(--cream-deep) 100%);
+    z-index: -1;
+  }
+  .hero-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 16px 32px -10px rgba(46,42,36,0.3);
   }
   .hero h1 {
     font-family: var(--font-display);
@@ -203,7 +226,7 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
     font-size: clamp(17px, 2vw, 20px);
     color: var(--ink-soft);
     max-width: 520px;
-    margin-bottom: 36px;
+    margin: 0 auto 36px;
   }
 
   .btn-primary {
@@ -238,7 +261,7 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
   }
   .btn-secondary:hover { background: var(--ink); color: var(--cream); }
 
-  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
   /* ---------- Transformación ---------- */
   .transformation { padding: 20px 0 90px; }
@@ -541,6 +564,31 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
     margin-top: 30px;
   }
 
+  .guarantee-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 480px;
+    margin: 24px auto 0;
+    padding: 16px 24px;
+    background: var(--sage-light);
+    border: 1.5px solid var(--sage);
+    border-radius: 14px;
+    text-align: center;
+  }
+  .guarantee-badge svg {
+    width: 22px;
+    height: 22px;
+    color: var(--terracotta-dark);
+    flex-shrink: 0;
+  }
+  .guarantee-badge span {
+    font-weight: 700;
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+
   /* ---------- Footer ---------- */
   footer {
     background: var(--ink);
@@ -607,6 +655,10 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container hero-inner">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring"></div>
+      <img src="assets/olga-portrait-2.jpg" alt="Olga">
+    </div>
     <span class="eyebrow">Controla tu Peso con Olga</span>
     <h1>Baja de peso y aprende a <em>mantenerlo</em>, sin pasar hambre</h1>
     <p class="lede">Un método simple para cuidarte de verdad: qué comprar, cómo comer bien y cómo moverte, para que los resultados se queden contigo.</p>
@@ -617,8 +669,6 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
       </a>
     </div>
   </div>
-
-  <img src="assets/olga-logo.png" alt="Logo Controla tu Peso con Olga" class="hero-image">
 </section>
 
 <div class="divider">
@@ -655,6 +705,23 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
     </div>
     <div class="video-frame">
       <iframe src="https://www.youtube.com/embed/FGcdN26rbkY" style="width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Controla tu Peso con Olga — Presentación"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MÉTODO ================= -->
+<section class="method" id="metodo">
+  <div class="container method-grid">
+    <div>
+      <span class="eyebrow">Qué es Controla tu Peso con Olga</span>
+      <h2>Un método, no una dieta más</h2>
+      <p>He creado un método pensado para cualquier mujer que quiera ordenar su alimentación, crear hábitos reales y empezar a moverse — sin dietas rígidas ni prohibiciones.</p>
+      <p>Te voy a enseñar a construir tus platos, organizarte y mantener resultados a largo plazo.</p>
+    </div>
+    <div>
+      <div class="method-photo">
+        <img src="assets/olga-portrait-1.jpg" alt="Olga">
+      </div>
     </div>
   </div>
 </section>
@@ -716,29 +783,13 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ================= MÉTODO ================= -->
-<section class="method" id="metodo">
-  <div class="container method-grid">
-    <div>
-      <span class="eyebrow">Qué es Controla tu Peso con Olga</span>
-      <h2>Un método, no una dieta más</h2>
-      <p>He creado un método pensado para cualquier mujer que quiera ordenar su alimentación, crear hábitos reales y empezar a moverse — sin dietas rígidas ni prohibiciones.</p>
-      <p>Te voy a enseñar a construir tus platos, organizarte y mantener resultados a largo plazo.</p>
-    </div>
-    <div>
-      <div class="method-photo">
-        <img src="assets/olga-portrait-1.jpg" alt="Olga">
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= PRECIOS ================= -->
 <section class="pricing" id="planes">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">Elige tu plan</span>
       <h2>Dos formas de empezar</h2>
+      <p style="margin-top:14px; display:inline-block; color:var(--terracotta-dark); font-size:15.5px; font-weight:700; background:rgba(193,97,58,0.1); padding:8px 18px; border-radius:999px;">⏳ Plazas limitadas cada mes — no te quedes fuera.</p>
     </div>
 
     <div class="plans-grid">
@@ -785,6 +836,10 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
     </div>
 
     <p class="pricing-note">Pago seguro con tarjeta · Cancela cuando quieras · Sin permanencia</p>
+    <div class="guarantee-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span>Si el primer mes no es para ti, lo cancelas sin permanencia.</span>
+    </div>
   </div>
 </section>
 
