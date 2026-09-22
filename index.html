@@ -175,6 +175,20 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
     white-space: nowrap;
   }
   .nav-cta:hover { background: var(--terracotta-dark); }
+  .nav-link {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+    text-decoration: none;
+    margin-right: 18px;
+    white-space: nowrap;
+  }
+  .nav-link:hover { color: var(--terracotta-dark); }
+  .nav-right { display: flex; align-items: center; }
+  @media (max-width: 560px) {
+    .nav-link { display: none; }
+  }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -589,6 +603,70 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
     color: var(--ink);
   }
 
+  /* ---------- Guías descargables (catálogo) ---------- */
+  .catalog {
+    background: var(--cream-deep);
+    padding: 90px 0 100px;
+  }
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 920px;
+    margin: 44px auto 0;
+  }
+  .catalog-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .catalog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 48px -22px rgba(46,42,36,0.3);
+  }
+  .catalog-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: var(--sage-light);
+  }
+  .catalog-body { padding: 22px 22px 26px; display: flex; flex-direction: column; flex-grow: 1; }
+  .catalog-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 19px;
+    margin-bottom: 6px;
+  }
+  .catalog-tagline { color: var(--ink-soft); font-size: 13.5px; margin-bottom: 16px; }
+  .catalog-price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 18px; }
+  .catalog-price-row .price-old { font-size: 15px; }
+  .catalog-price-row .price-new { font-size: 26px; }
+  .catalog-cta {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding: 13px 18px;
+    border-radius: 999px;
+    background: var(--terracotta);
+    color: var(--cream);
+    margin-top: auto;
+    transition: background 0.2s ease;
+  }
+  .catalog-card:hover .catalog-cta { background: var(--terracotta-dark); }
+  .catalog-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 34px;
+  }
+
   /* ---------- Footer ---------- */
   footer {
     background: var(--ink);
@@ -648,7 +726,10 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
       <img src="assets/olga-logo.png" alt="Olga Campuzano Coach" class="brand-logo">
       <span class="brand">Controla tu Peso con Olga</span>
     </a>
-    <a class="nav-cta" href="#planes">Ver planes</a>
+    <div class="nav-right">
+      <a class="nav-link" href="#guias">Guías</a>
+      <a class="nav-cta" href="#planes">Ver planes</a>
+    </div>
   </div>
 </header>
 
@@ -840,6 +921,34 @@ src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
       <span>Si el primer mes no es para ti, lo cancelas sin permanencia.</span>
     </div>
+  </div>
+</section>
+
+<!-- ================= GUÍAS DESCARGABLES (CATÁLOGO) ================= -->
+<section class="catalog" id="guias">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Guías descargables</span>
+      <h2>Empieza hoy mismo, a tu ritmo</h2>
+      <p style="margin-top:14px; color:var(--ink-soft); font-size:15.5px;">Pago único, sin suscripción. Acceso instantáneo a tu PDF.</p>
+    </div>
+    <div class="catalog-grid">
+      <!-- Guía 1 -->
+      <a class="catalog-card" href="guia-empieza-a-perder-grasa.html">
+        <img src="assets/portada-guia-mes1.jpg" alt="Portada de la guía Empieza a perder grasa con Olga" class="catalog-cover">
+        <div class="catalog-body">
+          <div class="catalog-title">Empieza a perder grasa con Olga</div>
+          <div class="catalog-tagline">30 días para reorganizar tu alimentación y tus hábitos, sin dietas rígidas.</div>
+          <div class="catalog-price-row">
+            <span class="price-old">29,90€</span>
+            <span class="price-new">19,90€</span>
+          </div>
+          <span class="catalog-cta">Ver guía</span>
+        </div>
+      </a>
+      <!-- Próximas guías se añaden aquí como nuevas .catalog-card -->
+    </div>
+    <p class="catalog-note">Nuevas guías se irán añadiendo aquí próximamente.</p>
   </div>
 </section>
 
