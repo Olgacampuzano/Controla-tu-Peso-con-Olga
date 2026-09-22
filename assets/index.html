@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1092933660357155');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1092933660357155&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controla tu Peso con Olga</title>
+
+<!--
+  ============================================================
+  META PIXEL — pega aquí tu código base cuando lo tengas listo
+  (Facebook Events Manager → Configuración → Instalar código manualmente)
+  ============================================================
+  <script>
+  !function(f,b,e,v,n,t,s){...} // pega el snippet completo de Meta aquí
+  fbq('init', 'TU_PIXEL_ID');
+  fbq('track', 'PageView');
+  </script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #FAF3EA;
+    --cream-deep: #F1E7D8;
+    --ink: #2E2A24;
+    --ink-soft: #5C5548;
+    --terracotta: #C1613A;
+    --terracotta-dark: #9C4B2C;
+    --sage: #8FA07E;
+    --sage-light: #E7ECDE;
+    --gold: #D9A653;
+    --line: rgba(46,42,36,0.12);
+
+    --font-display: "Fraunces", serif;
+    --font-body: "Work Sans", sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, svg { max-width: 100%; display: block; }
+
+  a { color: inherit; }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { position: relative; }
+
+  /* ---------- Focus visibility ---------- */
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--terracotta);
+    outline-offset: 3px;
+  }
+
+  /* ---------- Eyebrow label ---------- */
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 1.5px;
+    background: var(--terracotta-dark);
+    display: inline-block;
+  }
+
+  /* ============================================================
+     PLATO — elemento gráfico distintivo (deriva del propio Método
+     Olga: ½ verduras, ¼ proteína, ¼ hidratos). Se repite como
+     firma visual en el hero, divisores y en la sección de método.
+     ============================================================ */
+  .plate-mark { display: block; }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    right: -6%;
+    width: 420px;
+    z-index: 0;
+  }
+  @media (max-width: 900px) {
+    .hero-image { position: static; width: 200px; margin: 30px auto 0; }
+  }
+
+  .divider {
+    display: flex;
+    justify-content: center;
+    padding: 6px 0;
+  }
+  .divider svg { width: 46px; height: 46px; }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250,243,234,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .brand-logo {
+    height: 32px;
+    width: auto;
+  }
+  .brand {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+  }
+  .nav-cta {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    background: var(--terracotta);
+    color: var(--cream);
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--terracotta-dark); }
+  .nav-link {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+    text-decoration: none;
+    margin-right: 18px;
+    white-space: nowrap;
+  }
+  .nav-link:hover { color: var(--terracotta-dark); }
+  .nav-right { display: flex; align-items: center; }
+  @media (max-width: 560px) {
+    .nav-link { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 90px 0 70px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .hero-photo-wrap {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    margin: 0 auto 22px;
+  }
+  .hero-photo-ring {
+    position: absolute;
+    inset: -14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--sage-light) 0%, var(--cream-deep) 100%);
+    z-index: -1;
+  }
+  .hero-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 16px 32px -10px rgba(46,42,36,0.3);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    margin: 20px 0 24px;
+    color: var(--ink);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .hero p.lede {
+    font-size: clamp(17px, 2vw, 20px);
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto 36px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    background: var(--terracotta);
+    color: var(--cream);
+    padding: 16px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .btn-primary:hover { background: var(--terracotta-dark); transform: translateY(-1px); }
+  .btn-primary svg { width: 16px; height: 16px; }
+
+  .btn-secondary {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink);
+    padding: 15px 26px;
+    border-radius: 999px;
+    border: 1.5px solid var(--ink);
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .btn-secondary:hover { background: var(--ink); color: var(--cream); }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+  /* ---------- Transformación ---------- */
+  .transformation { padding: 20px 0 90px; }
+  .transformation-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 860px) {
+    .transformation-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+  .transformation-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px -30px rgba(46,42,36,0.4);
+  }
+  .transformation-text h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(26px, 3.6vw, 34px);
+    line-height: 1.2;
+    margin: 14px 0 18px;
+  }
+  .transformation-text p {
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  /* ---------- Video ---------- */
+  .video-section { padding: 20px 0 90px; }
+  .video-heading { text-align: center; max-width: 560px; margin: 0 auto 34px; }
+  .video-heading h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 38px);
+    margin: 14px 0 10px;
+  }
+  .video-heading p { color: var(--ink-soft); font-size: 16px; }
+  .avatar-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 18px;
+    border: 3px solid #fff;
+    box-shadow: 0 12px 26px -10px rgba(46,42,36,0.4);
+  }
+
+  .video-frame {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--sage) 0%, #6f8060 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 24px 48px -20px rgba(46,42,36,0.35);
+  }
+  /*
+    Cuando tengas el vídeo grabado, sustituye este bloque por:
+    <iframe src="URL_DE_TU_VIDEO" style="width:100%;height:100%;border:0" allowfullscreen></iframe>
+  */
+  .video-placeholder-text {
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  .play-btn {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+  }
+  .play-btn svg { width: 26px; height: 26px; margin-left: 4px; }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials { padding: 30px 0 100px; }
+  .section-heading { text-align: center; max-width: 600px; margin: 0 auto 48px; }
+  .section-heading h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 14px 0 0;
+  }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .testi-grid .testi-card { grid-column: span 2; }
+  .testi-grid .testi-card:nth-child(4) { grid-column: 2 / span 2; }
+  .testi-grid .testi-card:nth-child(5) { grid-column: 4 / span 2; }
+  @media (max-width: 800px) {
+    .testi-grid { grid-template-columns: 1fr; }
+    .testi-grid .testi-card,
+    .testi-grid .testi-card:nth-child(4),
+    .testi-grid .testi-card:nth-child(5) { grid-column: auto; }
+  }
+  .testi-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 30px 26px;
+  }
+  .testi-quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .testi-person { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--sage-light);
+    color: var(--sage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .testi-name { font-weight: 600; font-size: 14px; }
+  .testi-meta { font-size: 13px; color: var(--ink-soft); }
+  .testi-placeholder-tag {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--terracotta-dark);
+    background: rgba(193,97,58,0.1);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  /* ---------- About / Method ---------- */
+  .method {
+    background: var(--sage-light);
+    padding: 90px 0;
+  }
+  .method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  @media (max-width: 860px) {
+    .method-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .method h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 38px);
+    margin: 14px 0 20px;
+    line-height: 1.15;
+  }
+  .method p { color: var(--ink-soft); font-size: 16.5px; margin-bottom: 16px; }
+
+  .method-photo { display: flex; justify-content: center; }
+  .method-photo img {
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px -30px rgba(46,42,36,0.4);
+  }
+
+  /* ---------- Pricing ---------- */
+  .pricing { padding: 100px 0 110px; }
+  .plans-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 56px;
+    align-items: stretch;
+  }
+  @media (max-width: 800px) {
+    .plans-grid { grid-template-columns: 1fr; }
+  }
+
+  .plan-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 38px 34px;
+    display: flex;
+    flex-direction: column;
+  }
+  .plan-card.featured {
+    border: 2px solid var(--terracotta);
+    position: relative;
+    box-shadow: 0 30px 60px -30px rgba(193,97,58,0.4);
+  }
+  .plan-badge {
+    position: absolute;
+    top: -14px;
+    left: 34px;
+    background: var(--terracotta);
+    color: var(--cream);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+  .plan-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  .plan-tagline { color: var(--ink-soft); font-size: 14.5px; margin-bottom: 24px; }
+
+  .price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
+  .price-old {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--ink-soft);
+    text-decoration: line-through;
+    text-decoration-color: var(--terracotta);
+    text-decoration-thickness: 1.5px;
+  }
+  .price-new {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 42px;
+    color: var(--ink);
+  }
+  .price-period { font-size: 14px; color: var(--ink-soft); }
+  .save-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--terracotta-dark);
+    background: rgba(193,97,58,0.1);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 26px;
+  }
+
+  .plan-features { list-style: none; margin-bottom: 32px; flex-grow: 1; }
+  .plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    padding: 9px 0;
+    border-top: 1px solid var(--line);
+  }
+  .plan-features li:first-child { border-top: none; }
+  .plan-features svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; color: var(--sage); }
+
+  .plan-cta {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15.5px;
+    padding: 15px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .plan-card:not(.featured) .plan-cta {
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+  }
+  .plan-card:not(.featured) .plan-cta:hover { background: var(--ink); color: var(--cream); }
+  .plan-card.featured .plan-cta {
+    background: var(--terracotta);
+    color: var(--cream);
+  }
+  .plan-card.featured .plan-cta:hover { background: var(--terracotta-dark); }
+
+  .pricing-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 30px;
+  }
+
+  .guarantee-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 480px;
+    margin: 24px auto 0;
+    padding: 16px 24px;
+    background: var(--sage-light);
+    border: 1.5px solid var(--sage);
+    border-radius: 14px;
+    text-align: center;
+  }
+  .guarantee-badge svg {
+    width: 22px;
+    height: 22px;
+    color: var(--terracotta-dark);
+    flex-shrink: 0;
+  }
+  .guarantee-badge span {
+    font-weight: 700;
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+
+  /* ---------- Guías descargables (catálogo) ---------- */
+  .catalog {
+    background: var(--cream-deep);
+    padding: 90px 0 100px;
+  }
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 920px;
+    margin: 44px auto 0;
+  }
+  .catalog-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .catalog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 48px -22px rgba(46,42,36,0.3);
+  }
+  .catalog-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: var(--sage-light);
+  }
+  .catalog-body { padding: 22px 22px 26px; display: flex; flex-direction: column; flex-grow: 1; }
+  .catalog-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 19px;
+    margin-bottom: 6px;
+  }
+  .catalog-tagline { color: var(--ink-soft); font-size: 13.5px; margin-bottom: 16px; }
+  .catalog-price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 18px; }
+  .catalog-price-row .price-old { font-size: 15px; }
+  .catalog-price-row .price-new { font-size: 26px; }
+  .catalog-cta {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding: 13px 18px;
+    border-radius: 999px;
+    background: var(--terracotta);
+    color: var(--cream);
+    margin-top: auto;
+    transition: background 0.2s ease;
+  }
+  .catalog-card:hover .catalog-cta { background: var(--terracotta-dark); }
+  .catalog-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 34px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 50px 0 34px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-brand {
+    font-family: var(--font-display);
+    font-size: 18px;
+  }
+  footer p.small { font-size: 13px; opacity: 0.65; margin-top: 4px; }
+  .footer-legal {
+    font-size: 12.5px;
+    opacity: 0.55;
+    max-width: 520px;
+    line-height: 1.6;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  /* ---------- WhatsApp flotante ---------- */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 200;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 24px -6px rgba(37,211,102,0.55);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  .whatsapp-float:hover { transform: scale(1.06); }
+  .whatsapp-float svg { width: 30px; height: 30px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav container">
+    <a class="brand-mark" href="#">
+      <img src="assets/olga-logo.png" alt="Olga Campuzano Coach" class="brand-logo">
+      <span class="brand">Controla tu Peso con Olga</span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-link" href="#guias">Guías</a>
+      <a class="nav-cta" href="#planes">Ver planes</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring"></div>
+      <img src="assets/olga-portrait-2.jpg" alt="Olga">
+    </div>
+    <span class="eyebrow">Controla tu Peso con Olga</span>
+    <h1>Baja de peso y aprende a <em>mantenerlo</em>, sin pasar hambre</h1>
+    <p class="lede">Un método simple para cuidarte de verdad: qué comprar, cómo comer bien y cómo moverte, para que los resultados se queden contigo.</p>
+    <div class="cta-row">
+      <a class="btn-primary" href="#planes">
+        Quiero empezar
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#C1613A" stroke-width="1.4"/><circle cx="20" cy="20" r="3" fill="#C1613A"/></svg>
+</div>
+
+<!-- ================= TRANSFORMACIÓN ================= -->
+<section class="transformation">
+  <div class="container transformation-grid">
+    <div class="transformation-image">
+      <img src="assets/before-after.jpg" alt="Transformación de Olga, antes y después">
+    </div>
+    <div class="transformation-text">
+      <span class="eyebrow">Mi transformación</span>
+      <h2>No te voy a pedir algo que no haya hecho yo primero</h2>
+      <p>Aprendí a comer bien, a moverme y a construir hábitos que se sostienen en el tiempo — esa es la base de todo lo que ahora te enseño.</p>
+      <p>Hoy ayudo a otras mujeres a conseguir lo mismo — resultados que se quedan.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#C1613A" stroke-width="1.4"/><circle cx="20" cy="20" r="3" fill="#C1613A"/></svg>
+</div>
+
+<!-- ================= VIDEO ================= -->
+<section class="video-section">
+  <div class="container">
+    <div class="video-heading">
+      <img src="assets/olga-portrait-2.jpg" alt="Olga" class="avatar-photo">
+      <span class="eyebrow">Conóceme</span>
+      <h2>Así es como te voy a ayudar</h2>
+      <p>En menos de un minuto te cuento cómo funciona el método y qué vas a conseguir.</p>
+    </div>
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/FGcdN26rbkY" style="width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Controla tu Peso con Olga — Presentación"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MÉTODO ================= -->
+<section class="method" id="metodo">
+  <div class="container method-grid">
+    <div>
+      <span class="eyebrow">Qué es Controla tu Peso con Olga</span>
+      <h2>Un método, no una dieta más</h2>
+      <p>He creado un método pensado para cualquier mujer que quiera ordenar su alimentación, crear hábitos reales y empezar a moverse — sin dietas rígidas ni prohibiciones.</p>
+      <p>Te voy a enseñar a construir tus platos, organizarte y mantener resultados a largo plazo.</p>
+    </div>
+    <div>
+      <div class="method-photo">
+        <img src="assets/olga-portrait-1.jpg" alt="Olga">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Casos reales</span>
+      <h2>Mujeres a las que Olga ha acompañado</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-quote">"Me siento genial, con más energía y vitalidad para el día a día — y mi artrosis en las rodillas es como si hubiera desaparecido."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">♥</div>
+          <div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"Poco a poco, pasito a pasito, lo vamos consiguiendo. ¡Quién me iba a decir que en un año iba a perder casi 22 kilos!"</p>
+        <div class="testi-person">
+          <div class="testi-avatar">♥</div>
+          <div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"He bajado de los 60 kg... Me siento mejor físicamente, pero también anímicamente. Ahora quiero empezar a entrenar para fortalecerme."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">♥</div>
+          <div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"Estoy contenta por haber bajado peso y volumen, pero también por haber hecho un cambio, haber comenzado a cuidarme de nuevo, y me siento mejor."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">♥</div>
+          <div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"Entreno acabado, he ido sin ganas pero he acabado haciendo más tiempo. Después de las tres horas que llevo en marcha, estoy activa. ¡Qué contenta estoy de haber dado el paso de cuidarme!"</p>
+        <div class="testi-person">
+          <div class="testi-avatar">♥</div>
+          <div>
+            <div class="testi-name">Mujer acompañada por Olga</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRECIOS ================= -->
+<section class="pricing" id="planes">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Elige tu plan</span>
+      <h2>Dos formas de empezar</h2>
+      <p style="margin-top:14px; display:inline-block; color:var(--terracotta-dark); font-size:15.5px; font-weight:700; background:rgba(193,97,58,0.1); padding:8px 18px; border-radius:999px;">⏳ Plazas limitadas cada mes — no te quedes fuera.</p>
+    </div>
+
+    <div class="plans-grid">
+      <!-- BÁSICO -->
+      <div class="plan-card">
+        <div class="plan-name">Básico</div>
+        <div class="plan-tagline">Comunidad + guía mensual</div>
+        <div class="price-row">
+          <span class="price-old">64,99€</span>
+          <span class="price-new">49,99€</span>
+          <span class="price-period">/ mes</span>
+        </div>
+        <span class="save-badge">Precio de lanzamiento</span>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Acceso a la comunidad de Telegram</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Guía mensual con recetas y menús</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Lista de la compra lista para usar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Rutinas de ejercicio para casa</li>
+        </ul>
+        <!-- Payment Link de Stripe conectado -->
+        <a class="plan-cta" href="https://buy.stripe.com/8x2cN4ezJbUJ0PycF94Ni01">Quiero el plan Básico</a>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="plan-card featured">
+        <span class="plan-badge">Más completo</span>
+        <div class="plan-name">Premium</div>
+        <div class="plan-tagline">Comunidad exclusiva + acompañamiento 1:1</div>
+        <div class="price-row">
+          <span class="price-old">125,99€</span>
+          <span class="price-new">98,99€</span>
+          <span class="price-period">/ mes</span>
+        </div>
+        <span class="save-badge">Precio de lanzamiento</span>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Grupo de Telegram exclusivo Premium, con Olga más presente en tu seguimiento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Guía mensual con recetas, lista de la compra y rutinas de ejercicio</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 1 llamada individual de 30 min al mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Seguimiento personalizado de tu progreso</li>
+        </ul>
+        <!-- Payment Link de Stripe conectado -->
+        <a class="plan-cta" href="https://buy.stripe.com/4gMfZg4Z94shdCkdJd4Ni02">Quiero el plan Premium</a>
+      </div>
+    </div>
+
+    <p class="pricing-note">Pago seguro con tarjeta · Cancela cuando quieras · Sin permanencia</p>
+    <div class="guarantee-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span>Si el primer mes no es para ti, lo cancelas sin permanencia.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GUÍAS DESCARGABLES (CATÁLOGO) ================= -->
+<section class="catalog" id="guias">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Guías descargables</span>
+      <h2>Empieza hoy mismo, a tu ritmo</h2>
+      <p style="margin-top:14px; color:var(--ink-soft); font-size:15.5px;">Pago único, sin suscripción. Acceso instantáneo a tu PDF.</p>
+    </div>
+    <div class="catalog-grid">
+      <!-- Guía 1 -->
+      <a class="catalog-card" href="guia-empieza-a-perder-grasa.html">
+        <img src="assets/portada-guia-mes1.jpg" alt="Portada de la guía Empieza a perder grasa con Olga" class="catalog-cover">
+        <div class="catalog-body">
+          <div class="catalog-title">Empieza a perder grasa con Olga</div>
+          <div class="catalog-tagline">30 días para reorganizar tu alimentación y tus hábitos, sin dietas rígidas.</div>
+          <div class="catalog-price-row">
+            <span class="price-old">29,90€</span>
+            <span class="price-new">19,90€</span>
+          </div>
+          <span class="catalog-cta">Ver guía</span>
+        </div>
+      </a>
+      <!-- Próximas guías se añaden aquí como nuevas .catalog-card -->
+    </div>
+    <p class="catalog-note">Nuevas guías se irán añadiendo aquí próximamente.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Controla tu Peso con Olga</div>
+      </div>
+      <p class="footer-legal">Este programa ofrece educación general sobre alimentación, hábitos y actividad física. No sustituye la valoración individual de un profesional sanitario.</p>
+    </div>
+    <div style="margin-top:20px; text-align:center; font-size:12.5px; opacity:0.6;">
+      <a href="aviso-legal.html" style="color:inherit;">Aviso Legal</a> ·
+      <a href="privacidad.html" style="color:inherit;">Privacidad</a> ·
+      <a href="terminos-y-cancelacion.html" style="color:inherit;">Términos y Cancelación</a> ·
+      <a href="https://billing.stripe.com/p/login/4gMfZgdvFgaZ41KbB54Ni00" target="_blank" rel="noopener" style="color:inherit;">Gestiona tu suscripción</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Contacto directo por WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me/34629923863" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.4.7 4.63 1.9 6.5L4 29l7.65-1.85a11.9 11.9 0 0 0 4.37.83h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 21.8c-1.5 0-2.98-.4-4.27-1.16l-.31-.18-4.54 1.1 1.12-4.5-.2-.32a9.75 9.75 0 0 1-1.5-5.22c0-5.4 4.4-9.8 9.7-9.8 2.6 0 5.03 1.02 6.87 2.86a9.63 9.63 0 0 1 2.85 6.85c0 5.4-4.4 9.8-9.72 9.8zm5.35-7.3c-.29-.15-1.73-.86-2-.95-.27-.1-.46-.15-.66.14-.2.3-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.15-1.23-.46-2.34-1.46-.86-.77-1.45-1.72-1.61-2.02-.17-.3-.02-.46.13-.6.13-.13.29-.34.44-.5.15-.17.2-.3.29-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.57-.48-.5-.66-.5-.17 0-.37-.03-.56-.03-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.73-.7 1.97-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.55-.34z"/></svg>
+</a>
+
+</body>
+</html>
